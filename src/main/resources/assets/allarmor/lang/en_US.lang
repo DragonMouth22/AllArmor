@@ -1,0 +1,36 @@
+item.woodChunk.name=Wood Chunk
+item.stoneChunk.name=Stone Chunk
+item.cloth.name=Cloth
+item.chain.name=Chain
+item.chainmailMesh.name=Chainmail Mesh
+
+item.coalSword.name=Coal Sword
+item.coalPickaxe.name=Coal Pickaxe
+item.coalAxe.name=Coal Axe
+item.coalShovel.name=Coal Shovel
+item.coalHoe.name=Coal Hoe
+
+item.runeleatherHelmet.name=Runeleather Helmet
+item.runeleatherChestplate.name=Runeleather Chestplate
+item.runeleatherLeggings.name=Runeleather Leggings
+item.runeleatherBoots.name=Runeleather Boots
+item.woodHelmet.name=Wood Helmet
+item.woodChestplate.name=Wood Chestplate
+item.woodLeggings.name=Wood Leggings
+item.woodBoots.name=Wood Boots
+item.stoneHelmet.name=Stone Helmet
+item.stoneChestplate.name=Stone Chestplate
+item.stoneLeggings.name=Stone Leggings
+item.stoneBoots.name=Stone Boots
+item.coalHelmet.name=Coal Helmet
+item.coalChestplate.name=Coal Chestplate
+item.coalLeggings.name=Coal Leggings
+item.coalBoots.name=Coal Boots
+item.clothHelmet.name=Cloth Helmet
+item.clothChestplate.name=Cloth Chestplate
+item.clothLeggings.name=Cloth Leggings
+item.clothBoots.name=Cloth Boots
+
+itemGroup.allarmorArmorTab=AllArmor Armor
+itemGroup.allarmorToolsTab=AllArmor Tools and Weapons
+itemGroup.allarmorMaterialsTab=AllArmor Materials
