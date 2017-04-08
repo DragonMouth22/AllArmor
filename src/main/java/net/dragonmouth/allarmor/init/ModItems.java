@@ -1,8 +1,11 @@
 package net.dragonmouth.allarmor.init;
 
+import net.dragonmouth.allarmor.common.Reference;
+import net.dragonmouth.allarmor.handlers.EnumHandler.LeafTypes;
 import net.dragonmouth.allarmor.items.ItemChain;
 import net.dragonmouth.allarmor.items.ItemChainmailMesh;
 import net.dragonmouth.allarmor.items.ItemCloth;
+import net.dragonmouth.allarmor.items.ItemLeaf;
 import net.dragonmouth.allarmor.items.ItemStoneChunk;
 import net.dragonmouth.allarmor.items.ItemWoodChunk;
 import net.dragonmouth.allarmor.items.ModItemArmor;
@@ -18,6 +21,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -29,6 +33,7 @@ public class ModItems {
 	public static Item cloth;
 	public static Item chain;
 	public static Item chainmailMesh;
+	public static Item leaf;
 	
 	//Tool Materials
 	public static ToolMaterial toolCoal = EnumHelper.addToolMaterial("toolCoal", 1, 750, 3.0f, 0.5f, 11);
@@ -77,6 +82,7 @@ public class ModItems {
 		cloth = new ItemCloth();
 		chain = new ItemChain();
 		chainmailMesh = new ItemChainmailMesh();
+		leaf = new ItemLeaf();
 		
 	}
 	
@@ -88,6 +94,7 @@ public class ModItems {
 		GameRegistry.register(cloth);
 		GameRegistry.register(chain);
 		GameRegistry.register(chainmailMesh);
+		GameRegistry.register(leaf);
 		
 		//Tools
 		GameRegistry.registerItem(coalSword = new ModItemSword("coalSword", toolCoal), coalSword.getUnlocalizedName().substring(5));
@@ -129,6 +136,11 @@ public class ModItems {
 		registerRender(chain);
 		registerRender(chainmailMesh);
 		
+		//Leaf Item
+		for(int i = 0; i < LeafTypes.values().length; i++) {
+			registerRender(leaf, i, "leaf" + LeafTypes.values()[i].getResourceName());
+		}
+		
 		//Tools
 		registerRender(coalSword);
 		registerRender(coalPickaxe);
@@ -162,6 +174,10 @@ public class ModItems {
 	
 	private static void registerRender(Item item) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+	}
+	
+	private static void registerRender(Item item, int meta, String filename) {
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, filename), "inventory"));
 	}
 	
 }

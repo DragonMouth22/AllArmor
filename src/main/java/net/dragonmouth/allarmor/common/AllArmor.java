@@ -41,6 +41,7 @@ public class AllArmor {
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");
 		proxy.init();
+		proxy.registerModelBakeryVariants();
 		
 		ModCrafting.register();
 //		ModEntity.registerEntity();

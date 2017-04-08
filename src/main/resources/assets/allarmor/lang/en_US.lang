@@ -4,6 +4,13 @@ item.cloth.name=Cloth
 item.chain.name=Chain
 item.chainmailMesh.name=Chainmail Mesh
 
+item.leaf.oak.name=Oak Leaf
+item.leaf.spruce.name=Spruce Leaf
+item.leaf.birch.name=Birch Leaf
+item.leaf.jungle.name=Jungle Leaf
+item.leaf.acacia.name=Acacia Leaf
+item.leaf.darkOak.name=Dark Oak Leaf
+
 item.coalSword.name=Coal Sword
 item.coalPickaxe.name=Coal Pickaxe
 item.coalAxe.name=Coal Axe

@@ -2,6 +2,7 @@ package net.dragonmouth.allarmor.init;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -19,6 +20,14 @@ public class ModCrafting {
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.chain, 10, 0), "I I", " I ", "I I", 'I', Items.IRON_INGOT);
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.chain, 8, 0), " I ", "I I", " I ", 'I', Items.IRON_INGOT);
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.chainmailMesh, 1, 0), "CC", "CC", 'C', ModItems.chain);
+		
+		//Leaf Crating
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.leaf, 4, 0), new ItemStack(Blocks.LEAVES, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.leaf, 4, 1), new ItemStack(Blocks.LEAVES, 1, 1));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.leaf, 4, 2), new ItemStack(Blocks.LEAVES, 1, 2));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.leaf, 4, 3), new ItemStack(Blocks.LEAVES, 1, 3));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.leaf, 4, 4), new ItemStack(Blocks.LEAVES2, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.leaf, 4, 5), new ItemStack(Blocks.LEAVES2, 1, 1));
 		
 		//Chainmail Armor Crafting
 		GameRegistry.addShapedRecipe(new ItemStack(Items.CHAINMAIL_HELMET), "CCC", "C C", 'C', ModItems.chainmailMesh);
@@ -52,6 +61,12 @@ public class ModCrafting {
 		
 		//Extra Useful Crafting
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.WOOL, 2, 0), "CC", "CC", 'C', ModItems.cloth);
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES, 1, 0), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 0));
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES, 1, 1), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 1));
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES, 1, 2), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 2));
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES, 1, 3), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 3));
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES2, 1, 0), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 4));
+		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES2, 1, 1), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 5));
 		
 	}
 	

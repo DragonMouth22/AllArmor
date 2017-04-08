@@ -14,7 +14,8 @@ public class Reference {
 		STONECHUNK("stoneChunk", "stoneChunk"),
 		CLOTH("cloth", "cloth"),
 		CHAIN("chain", "chain"),
-		CHAINMAILMESH("chainmailMesh", "chainmailMesh");
+		CHAINMAILMESH("chainmailMesh", "chainmailMesh"),
+		LEAF("leaf", "leaf");
 		
 		private String unlocalizedName;
 		private String registryName;
