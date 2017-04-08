@@ -51,6 +51,7 @@ public class ModItems {
 	public static ArmorMaterial Wood = EnumHelper.addArmorMaterial("Wood", "allarmor:wood", 7, new int[] {2,5,4,2}, 7, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 1.0f);
 	public static ArmorMaterial Stone = EnumHelper.addArmorMaterial("Stone", "allarmor:stone", 13, new int[] {2,5,4,3}, 6, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.5f);
 	public static ArmorMaterial Coal = EnumHelper.addArmorMaterial("Coal", "allarmor:coal", 10, new int[] {1,4,3,1}, 11, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.5f);
+	public static ArmorMaterial Leaf = EnumHelper.addArmorMaterial("Leaf", "allarmor:leaf", 3, new int[] {1,3,2,1}, 4, SoundEvents.BLOCK_GRASS_BREAK, 0.0f);
 	
 	//Armor
 	public static Item runeleatherHelmet;
@@ -73,6 +74,10 @@ public class ModItems {
 	public static Item clothChestplate;
 	public static Item clothLeggings;
 	public static Item clothBoots;
+	public static Item leafHelmet;
+	public static Item leafChestplate;
+	public static Item leafLeggings;
+	public static Item leafBoots;
 	
 	public static void init() {
 		
@@ -124,6 +129,10 @@ public class ModItems {
 		GameRegistry.registerItem(clothChestplate = new ModItemArmor("clothChestplate", Cloth, 1, EntityEquipmentSlot.CHEST), clothChestplate.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(clothLeggings = new ModItemArmor("clothLeggings", Cloth, 1, EntityEquipmentSlot.LEGS), clothLeggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(clothBoots = new ModItemArmor("clothBoots", Cloth, 1, EntityEquipmentSlot.FEET), clothBoots.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(leafHelmet = new ModItemArmor("leafHelmet", Leaf, 1, EntityEquipmentSlot.HEAD), leafHelmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(leafChestplate = new ModItemArmor("leafChestplate", Leaf, 1, EntityEquipmentSlot.CHEST), leafChestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(leafLeggings = new ModItemArmor("leafLeggings", Leaf, 1, EntityEquipmentSlot.LEGS), leafLeggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(leafBoots = new ModItemArmor("leafBoots", Leaf, 1, EntityEquipmentSlot.FEET), leafBoots.getUnlocalizedName().substring(5));
 		
 	}
 	
@@ -169,6 +178,10 @@ public class ModItems {
 		registerRender(clothChestplate);
 		registerRender(clothLeggings);
 		registerRender(clothBoots);
+		registerRender(leafHelmet);
+		registerRender(leafChestplate);
+		registerRender(leafLeggings);
+		registerRender(leafBoots);
 		
 	}
 	
@@ -176,6 +189,7 @@ public class ModItems {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 	
+	//Register Render for items with metadata
 	private static void registerRender(Item item, int meta, String filename) {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(new ResourceLocation(Reference.MODID, filename), "inventory"));
 	}

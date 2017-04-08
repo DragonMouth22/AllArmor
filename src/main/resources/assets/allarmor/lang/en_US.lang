@@ -37,6 +37,10 @@ item.clothHelmet.name=Cloth Helmet
 item.clothChestplate.name=Cloth Chestplate
 item.clothLeggings.name=Cloth Leggings
 item.clothBoots.name=Cloth Boots
+item.leafHelmet.name=Leaf Helmet
+item.leafChestplate.name=Leaf Chestplate
+item.leafLeggings.name=Leaf Leggings
+item.leafBoots.name=Leaf Boots
 
 itemGroup.allarmorArmorTab=AllArmor Armor
 itemGroup.allarmorToolsTab=AllArmor Tools and Weapons
