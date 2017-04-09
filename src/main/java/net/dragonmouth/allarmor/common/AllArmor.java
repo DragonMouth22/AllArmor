@@ -1,5 +1,6 @@
 package net.dragonmouth.allarmor.common;
 
+import net.dragonmouth.allarmor.handlers.OreDictionaryHandler;
 import net.dragonmouth.allarmor.init.ModCrafting;
 import net.dragonmouth.allarmor.init.ModItems;
 import net.dragonmouth.allarmor.init.ModTabArmor;
@@ -44,11 +45,15 @@ public class AllArmor {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		System.out.println("Init");
+		
 		proxy.init();
 		proxy.registerModelBakeryVariants();
 		
 		ModCrafting.register();
 //		ModEntity.registerEntity();
+		
+		OreDictionaryHandler.registerOreDictionary();
+		
 	}
 	
 	@EventHandler

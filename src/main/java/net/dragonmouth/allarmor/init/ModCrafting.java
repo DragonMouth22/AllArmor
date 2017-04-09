@@ -4,6 +4,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class ModCrafting {
 
@@ -59,30 +60,10 @@ public class ModCrafting {
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.clothBoots), "C C", "C C", 'C', ModItems.cloth);
 		
 		//Leaf Armor Crafting
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafHelmet), "LLL", "L L", 'L', new ItemStack(ModItems.leaf, 1, 0));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafChestplate), "L L", "LLL", "LLL", 'L', new ItemStack(ModItems.leaf, 1, 0));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafLeggings), "LLL", "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 0));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafBoots), "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 0));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafHelmet), "LLL", "L L", 'L', new ItemStack(ModItems.leaf, 1, 1));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafChestplate), "L L", "LLL", "LLL", 'L', new ItemStack(ModItems.leaf, 1, 1));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafLeggings), "LLL", "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 1));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafBoots), "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 1));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafHelmet), "LLL", "L L", 'L', new ItemStack(ModItems.leaf, 1, 2));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafChestplate), "L L", "LLL", "LLL", 'L', new ItemStack(ModItems.leaf, 1, 2));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafLeggings), "LLL", "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 2));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafBoots), "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 2));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafHelmet), "LLL", "L L", 'L', new ItemStack(ModItems.leaf, 1, 3));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafChestplate), "L L", "LLL", "LLL", 'L', new ItemStack(ModItems.leaf, 1, 3));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafLeggings), "LLL", "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 3));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafBoots), "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 3));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafHelmet), "LLL", "L L", 'L', new ItemStack(ModItems.leaf, 1, 4));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafChestplate), "L L", "LLL", "LLL", 'L', new ItemStack(ModItems.leaf, 1, 4));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafLeggings), "LLL", "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 4));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafBoots), "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 4));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafHelmet), "LLL", "L L", 'L', new ItemStack(ModItems.leaf, 1, 5));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafChestplate), "L L", "LLL", "LLL", 'L', new ItemStack(ModItems.leaf, 1, 5));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafLeggings), "LLL", "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 5));
-		GameRegistry.addShapedRecipe(new ItemStack(ModItems.leafBoots), "L L", "L L", 'L', new ItemStack(ModItems.leaf, 1, 5));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.leafHelmet), "LLL", "L L", 'L', "itemLeaf"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.leafChestplate), "L L", "LLL", "LLL", 'L', "itemLeaf"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.leafLeggings), "LLL", "L L", "L L", 'L', "itemLeaf"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.leafBoots), "L L", "L L", 'L', "itemLeaf"));
 		
 		//Extra Useful Crafting
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.WOOL, 2, 0), "CC", "CC", 'C', ModItems.cloth);
