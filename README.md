@@ -28,6 +28,6 @@ AllArmor is a mod that implements armor, tools, and weapons of the minerals and 
 
 ---
 
-You can download the latest version [here](https://justin-schaaf.squarespace.com/s/AllArmor-030.jar).  
+You can download the latest version [here](https://justin-schaaf.squarespace.com/s/AllArmor-032.jar).  
 
 ---
