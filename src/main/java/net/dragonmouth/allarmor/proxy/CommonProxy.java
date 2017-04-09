@@ -11,7 +11,7 @@ public class CommonProxy {
 	}
 	
 	public void registerModelBakeryVariants() {
-		ModelBakery.registerItemVariants(ModItems.leaf, new ResourceLocation(Reference.MODID, "leafOak" ), new ResourceLocation(Reference.MODID, "leafSpruce" ), new ResourceLocation(Reference.MODID, "leafBirch" ), new ResourceLocation(Reference.MODID, "leafJungle" ), new ResourceLocation(Reference.MODID, "leafAcacia" ), new ResourceLocation(Reference.MODID, "leafBigOak" ));
+		
 	}
 	
 }

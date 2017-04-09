@@ -5,7 +5,9 @@ import net.dragonmouth.allarmor.init.ModItems;
 import net.dragonmouth.allarmor.init.ModTabArmor;
 import net.dragonmouth.allarmor.init.ModTabMaterials;
 import net.dragonmouth.allarmor.init.ModTabTools;
+import net.dragonmouth.allarmor.proxy.ClientProxy;
 import net.dragonmouth.allarmor.proxy.CommonProxy;
+import net.dragonmouth.allarmor.proxy.ServerProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -23,6 +25,8 @@ public class AllArmor {
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
+	public static ClientProxy clientProxy;
+	public static ServerProxy serverProxy;
 	
 	public static CreativeTabs allarmorArmorTab = new ModTabArmor(12, "allarmorArmorTab");
 	public static CreativeTabs allarmorToolsTab = new ModTabTools(13, "allarmorToolsTab");

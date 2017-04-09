@@ -19,14 +19,14 @@ public class ModItemArmor extends ItemArmor {
 		this.setMaxStackSize(1);
 	}
 	
-	@Override
+/*	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
 		
 		/*if(stack.getItem() == ModItems.stoneHelmet) {
 			
 			effectPlayer(player, Potion.getPotionById(2), 1);
 			
-		}*/
+		}
 		
 		if(player.inventory.armorItemInSlot(3) != null && player.inventory.armorItemInSlot(3).getItem() == ModItems.stoneHelmet && player.inventory.armorItemInSlot(2) != null && player.inventory.armorItemInSlot(2).getItem() == ModItems.stoneChestplate && player.inventory.armorItemInSlot(1) != null && player.inventory.armorItemInSlot(1).getItem() == ModItems.stoneLeggings && player.inventory.armorItemInSlot(0) != null && player.inventory.armorItemInSlot(0).getItem() == ModItems.stoneBoots) {
 			
@@ -44,6 +44,6 @@ public class ModItemArmor extends ItemArmor {
 			
 		}
 		
-	}
+	}*/
 
 }

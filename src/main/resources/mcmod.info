@@ -3,7 +3,7 @@
   "modid": "allarmor",
   "name": "AllArmor",
   "description": "A mod that implements armor, tools, and weapons of the minerals and materials of Minecraft.",
-  "version": "0.2.0",
+  "version": "0.3.2",
   "mcversion": "1.10, 1.10.2",
   "url": "",
   "updateUrl": "",
