@@ -1,5 +1,8 @@
 package net.dragonmouth.allarmor.init;
 
+import org.apache.logging.log4j.Level;
+
+import net.dragonmouth.allarmor.handlers.LogHandler;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -9,6 +12,8 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 public class ModCrafting {
 
 	public static void register() {
+		
+		LogHandler.logHandler.info("Starting to register Crafting Recipes!");
 		
 		//Item Crafting
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.woodChunk, 9, 0), "W", "W", "W", 'W', Blocks.LOG);
@@ -73,6 +78,8 @@ public class ModCrafting {
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES, 1, 3), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 3));
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES2, 1, 0), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 4));
 		GameRegistry.addShapedRecipe(new ItemStack(Blocks.LEAVES2, 1, 1), "LL", "LL", 'L', new ItemStack(ModItems.leaf, 1, 5));
+		
+		LogHandler.logHandler.info("Finished registering crafting recipes!");
 		
 	}
 	

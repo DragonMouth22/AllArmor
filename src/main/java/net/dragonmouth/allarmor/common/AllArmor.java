@@ -1,5 +1,8 @@
 package net.dragonmouth.allarmor.common;
 
+import org.apache.logging.log4j.Level;
+
+import net.dragonmouth.allarmor.handlers.LogHandler;
 import net.dragonmouth.allarmor.handlers.OreDictionaryHandler;
 import net.dragonmouth.allarmor.init.ModCrafting;
 import net.dragonmouth.allarmor.init.ModItems;
@@ -35,16 +38,20 @@ public class AllArmor {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println("PreInit");
+		
+		LogHandler.logHandler.info("Pre-Inilitization Started!");
 		
 		ModItems.init();
 		ModItems.register();
+		
+		LogHandler.logHandler.info("Pre-Inilitization Complete!");
 		
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		System.out.println("Init");
+		
+		LogHandler.logHandler.info("Inilitization Started!");
 		
 		proxy.init();
 		proxy.registerModelBakeryVariants();
@@ -54,11 +61,16 @@ public class AllArmor {
 		
 		OreDictionaryHandler.registerOreDictionary();
 		
+		LogHandler.logHandler.info("Inilitization Complete!");
+		
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		System.out.println("PostInit");
+		
+		LogHandler.logHandler.info("Post-Inilitization Started!");
+		LogHandler.logHandler.info("Post-Inilitization Complete!");
+		
 	}
 	
 }

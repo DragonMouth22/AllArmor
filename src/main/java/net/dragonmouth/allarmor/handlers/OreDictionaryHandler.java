@@ -1,5 +1,7 @@
 package net.dragonmouth.allarmor.handlers;
 
+import org.apache.logging.log4j.Level;
+
 import net.dragonmouth.allarmor.init.ModItems;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
@@ -7,6 +9,8 @@ import net.minecraftforge.oredict.OreDictionary;
 public class OreDictionaryHandler {
 
 	public static void registerOreDictionary() {
+		
+		LogHandler.logHandler.info("Registering OreDictionary Values");
 		
 		// Crafting Materials
 		OreDictionary.registerOre("chunkWood", ModItems.woodChunk);
@@ -28,6 +32,8 @@ public class OreDictionaryHandler {
 		OreDictionary.registerOre("itemLeafAcacia", new ItemStack(ModItems.leaf, 1, 4));
 		OreDictionary.registerOre("itemLeaf", new ItemStack(ModItems.leaf, 1, 5));
 		OreDictionary.registerOre("itemLeafDarkOak", new ItemStack(ModItems.leaf, 1, 5));
+		
+		LogHandler.logHandler.info("OreDictionary Registration Complete!");
 		
 	}
 	

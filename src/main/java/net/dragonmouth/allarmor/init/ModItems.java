@@ -1,6 +1,9 @@
 package net.dragonmouth.allarmor.init;
 
+import org.apache.logging.log4j.Level;
+
 import net.dragonmouth.allarmor.common.Reference;
+import net.dragonmouth.allarmor.handlers.LogHandler;
 import net.dragonmouth.allarmor.handlers.EnumHandler.LeafTypes;
 import net.dragonmouth.allarmor.items.ItemChain;
 import net.dragonmouth.allarmor.items.ItemChainmailMesh;
@@ -81,6 +84,8 @@ public class ModItems {
 	
 	public static void init() {
 		
+		LogHandler.logHandler.info("Item Inilitization Started!");
+		
 		//Items
 		woodChunk = new ItemWoodChunk();
 		stoneChunk = new ItemStoneChunk();
@@ -89,9 +94,13 @@ public class ModItems {
 		chainmailMesh = new ItemChainmailMesh();
 		leaf = new ItemLeaf();
 		
+		LogHandler.logHandler.info("Item Inilitization Complete!");
+		
 	}
 	
 	public static void register() {
+		
+		LogHandler.logHandler.info("Item Registry Started!");
 		
 		//Crafting Items
 		GameRegistry.register(woodChunk);
@@ -134,9 +143,13 @@ public class ModItems {
 		GameRegistry.registerItem(leafLeggings = new ModItemArmor("leafLeggings", Leaf, 1, EntityEquipmentSlot.LEGS), leafLeggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(leafBoots = new ModItemArmor("leafBoots", Leaf, 1, EntityEquipmentSlot.FEET), leafBoots.getUnlocalizedName().substring(5));
 		
+		LogHandler.logHandler.info("Item Registry Complete!");
+		
 	}
 	
 	public static void registerRenders() {
+		
+		LogHandler.logHandler.info("Starting to register renders!");
 		
 		//Items
 		registerRender(woodChunk);
@@ -182,6 +195,8 @@ public class ModItems {
 		registerRender(leafChestplate);
 		registerRender(leafLeggings);
 		registerRender(leafBoots);
+		
+		LogHandler.logHandler.info("Render registry Complete!");
 		
 	}
 	
