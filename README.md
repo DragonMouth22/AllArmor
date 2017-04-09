@@ -15,6 +15,7 @@ AllArmor is a mod that implements armor, tools, and weapons of the minerals and 
 * Wood
 * Stone
 * Coal
+* Leaf
 
 **Current Tool Sets:**
 * Coal
@@ -25,6 +26,7 @@ AllArmor is a mod that implements armor, tools, and weapons of the minerals and 
 * Cloth
 * Chain
 * Chainmail Mesh
+* Leaf
 
 ---
 
